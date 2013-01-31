@@ -422,5 +422,16 @@ class RowA extends RowDataAbstract {
 	public function setTbDate($tbDate) {
 		$this->tbDate = $tbDate;
 	}
+	
+	/**
+	 * 
+	 * @param RowS $rowS
+	 * @return boolean
+	 */
+	public function isRelatedTo(RowS $rowS) {
+		return $rowS->getLineName() == $this->getLineName()
+			&& $rowS->getPointNumber() == $this->getPointNumber()
+			&& $rowS->getPointIndex() == $this->getPointIndex();
+	}
 }
 ?>

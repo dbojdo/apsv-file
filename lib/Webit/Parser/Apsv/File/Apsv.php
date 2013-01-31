@@ -1,5 +1,7 @@
 <?php 
 namespace Webit\Parser\Apsv\File;
+
+use Webit\Parser\Apsv\Row\RowA;
 use Webit\Parser\Sps\File\SpsAbstract;
 
 class Apsv extends SpsAbstract {
@@ -36,6 +38,23 @@ class Apsv extends SpsAbstract {
 	 */
 	public function getIssueDate() {
 		return null;
+	}
+	
+	/**
+	 * 
+	 * @param RowS $row
+	 * @return array
+	 */
+	public function getRowsForRowS(RowS $row) {
+		$arRows = array_filter($this->rows,function($rowA) use ($row) {
+			if($rowA instanceof RowA) {
+				return $rowA->isRelatedTo($row);
+			}
+				
+			return false;
+		});
+		
+		return $arRows;
 	}
 }
 ?>
