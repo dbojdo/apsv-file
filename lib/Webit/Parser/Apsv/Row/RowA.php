@@ -40,8 +40,6 @@ class RowA extends RowDataAbstract {
 	
 	protected $shotNb;
 	
-	protected $shotNb;
-	
 	protected $acquisitionNb;
 	
 	protected $twoDigitsFleetNumber;
