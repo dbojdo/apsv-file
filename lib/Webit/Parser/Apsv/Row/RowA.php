@@ -424,6 +424,21 @@ class RowA extends RowDataAbstract {
 		$this->tbDate = $tbDate;
 	}
 	
+
+	/**
+	 *
+	 * @param int $year
+	 * @return \DateTime
+	 */
+	public function getDate($year) {
+		$time = sprintf('%d %d %06d',$year, $this->getDayOfYear() - 1, $this->getTime());
+		$format = 'Y z His';
+	
+		$date = \DateTime::createFromFormat($format, $time);
+	
+		return $date;
+	}
+	
 	/**
 	 * 
 	 * @param RowS $rowS
