@@ -1,5 +1,6 @@
 <?php
 namespace Webit\Parser\Apsv\Row;
+use Webit\Parser\Sps\Row\RowS;
 use Webit\Parser\Sps\Row\RowDataAbstract;
 
 class RowA extends RowDataAbstract {
