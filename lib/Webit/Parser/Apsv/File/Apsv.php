@@ -1,6 +1,7 @@
 <?php 
 namespace Webit\Parser\Apsv\File;
 
+use Webit\Parser\Sps\Row\RowS;
 use Webit\Parser\Apsv\Row\RowA;
 use Webit\Parser\Sps\File\SpsAbstract;
 
