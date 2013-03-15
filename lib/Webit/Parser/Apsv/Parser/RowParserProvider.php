@@ -9,6 +9,11 @@ use Webit\Parser\FixedWidth\Parser\Parser as FixedWidthParser;
 use Webit\Parser\FixedWidth\RowConfig\YamlDriver;
 
 class RowParserProvider extends SpsRowParserProvider {
+	public function __construct($definitionsDir = null, $apsvVersion = Apsv::VERSION_428) {
+		parent::__construct($definitionsDir);
+		$this->apsvVersion = $apsvVersion;
+	}
+	
 	protected function buildParsers() {
 		$hParser = new RowHParser($this->fwParser);
 			$rowDef = $this->driver->buildRow($this->definitionsDir.'/RowH.yml');
@@ -19,8 +24,13 @@ class RowParserProvider extends SpsRowParserProvider {
 		$this->parsers['H'] = $hParser;
 		
 		$aParser = new RowParser($this->fwParser);
-			$rowDef = $this->driver->buildRow($this->definitionsDir.'/RowA.yml');
+			if($this->apsvVersion == Apsv::VERSION_428) {
+				$rowDef = $this->driver->buildRow($this->definitionsDir.'/RowA.yml');
+			} else {
+				$rowDef = $this->driver->buildRow($this->definitionsDir.'/RowA_'.$this->apsvVersion.'.yml');
+			}
 			$aParser->registerRowDefinition($rowDef, 'A');
+		
 		$this->parsers['A'] = $aParser;
 	}
 }

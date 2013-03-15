@@ -6,6 +6,9 @@ use Webit\Parser\Apsv\Row\RowA;
 use Webit\Parser\Sps\File\SpsAbstract;
 
 class Apsv extends SpsAbstract {
+	const VERSION_408 = '408';
+	const VERSION_428 = '428';
+	
 	const SPS_TYPE_APSV = 'A';
 	
 	/**

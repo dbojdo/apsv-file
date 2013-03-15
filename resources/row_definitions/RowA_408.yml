@@ -1,0 +1,160 @@
+Webit\Parser\Apsv\Row\RowA:
+  positions:
+    type:
+      start: 1
+      end: 1
+    lineName:
+      start: 2
+      end: 17
+    pointNumber:
+      start: 18
+      end: 25
+    pointIndex:
+      type: int
+      start: 26
+      end: 26
+    fleetNumber:
+      start: 27
+      end: 27
+    vibratorNumber:
+      type: int
+      start: 28
+      end: 29
+    vibratorDriveLevel:
+      type: int
+      start: 30
+      end: 32
+    averagePhase:
+      type: int
+      start: 33
+      end: 36
+    peakPhase:
+      type: int
+      start: 37
+      end: 40
+    averageDistortion:
+      type: int
+      start: 41
+      end: 42
+    peakDistortion:
+      type: int
+      start: 43
+      end: 44
+    averageForce:
+      type: int
+      start: 45
+      end: 46
+    peakForce:
+      type: int
+      start: 47
+      end: 49
+    averageGroundStiffness:
+      type: int
+      start: 50
+      end: 52
+    averageGroundViscosity:
+      type: int
+      start: 53
+      end: 55
+    positionEasting:
+      type: float
+      start: 56
+      end: 64
+    positionNorthing:
+      type: float
+      start: 65
+      end: 74
+    positionElevation:
+      type: float
+      start: 75
+      end: 80
+    shotNb:
+      type: int
+      start: 82
+      end: 86
+    shotNb:
+      type: int
+      start: 87
+      end: 88
+    acquisitionNb:
+      type: int
+      start: 89
+      end: 90
+    twoDigitsFleetNumber:
+      type: int
+      start: 91
+      end: 92
+    vibStatusCode:
+      start: 94
+      end: 94
+    mass1Warning:
+      start: 94
+      end: 94
+    mass2Warning:
+      start: 95
+      end: 95  
+    mass3Warning:
+      start: 96
+      end: 96
+    plate1Warning:
+      start: 100
+      end: 100
+    plate2Warning:
+      start: 101
+      end: 101
+    plate3Warning:
+      start: 102
+      end: 102
+    plate4Warning:
+      start: 103
+      end: 103
+    plate5Warning:
+      start: 104
+      end: 104
+    plate6Warning:
+      start: 105
+      end: 105
+    forceOverload:
+      start: 106
+      end: 106
+    pressureOverload:
+      start: 107
+      end: 107
+    massOverload:
+      start: 108
+      end: 108
+    valveOverload:
+      start: 109
+      end: 109
+    excitationOverload:
+      start: 110
+      end: 110
+    stackingFold:
+      type: int
+      start: 111
+      end: 112  
+    computationDomain:
+      start: 113 
+      end: 113
+    ve432Version:
+      start: 114
+      end: 117
+    dayOfYear:
+      type: int
+      start: 118
+      end: 120
+    time:
+      type: int
+      start: 121
+      end: 126
+    hdop:
+      type: float
+      start: 127
+      end: 130
+    tbDate:
+      type: int
+      start: 131
+      end: 150
+    sourceString:
+      start: 1
+      end: 150
