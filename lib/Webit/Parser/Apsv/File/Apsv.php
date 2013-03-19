@@ -11,6 +11,18 @@ class Apsv extends SpsAbstract {
 	
 	const SPS_TYPE_APSV = 'A';
 	
+	public function __construct($filename, $version = self::VERSION_428) {
+		parent::__construct($filename);
+		$this->apsvVersion = $version;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getApsvVersion() {
+		return $this->apsvVersion;
+	}
+	
 	/**
 	 * 
 	 * @return string
@@ -18,7 +30,6 @@ class Apsv extends SpsAbstract {
 	public function getSpsType() {
 		return self::SPS_TYPE_APSV;
 	}
-	
 	
 	/**
 	 *

@@ -7,13 +7,14 @@ use Webit\Parser\Sps\Parser\RowParserProviderInterface;
 
 class Parser extends SpsParser {
 	public function __construct(RowParserProviderInterface $rowParserProvider = null) {
-		$this->rowParserProvider = $rowParserProvider ?: new RowParserProvider(__DIR__.'/../../../../../resources/row_definitions');
+		$this->rowParserProvider = $rowParserProvider ?: new RowParserProvider();
 	}
 	
 	protected function createSps($type, $pathname) {
 		switch($type) {
 			case Apsv::SPS_TYPE_APSV:
-				return new Apsv($pathname);
+				$apsv = new Apsv($pathname, $this->rowParserProvider->getApsvVersion());
+				return $apsv;
 				break;
 		}
 	

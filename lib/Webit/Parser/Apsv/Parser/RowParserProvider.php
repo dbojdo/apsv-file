@@ -1,6 +1,7 @@
 <?php
 namespace Webit\Parser\Apsv\Parser;
 
+use Webit\Parser\Apsv\File\Apsv;
 use Webit\Parser\Sps\Parser\RowParserProvider as SpsRowParserProvider;
 use Webit\Parser\Sps\Parser\RowParser;
 use Webit\Parser\Sps\Parser\RowHParser;
@@ -9,9 +10,17 @@ use Webit\Parser\FixedWidth\Parser\Parser as FixedWidthParser;
 use Webit\Parser\FixedWidth\RowConfig\YamlDriver;
 
 class RowParserProvider extends SpsRowParserProvider {
+	protected $apsvVersion;
+	
 	public function __construct($definitionsDir = null, $apsvVersion = Apsv::VERSION_428) {
-		parent::__construct($definitionsDir);
+		$definitionsDir = $definitionsDir ?: __DIR__.'/../../../../../resources/row_definitions';
 		$this->apsvVersion = $apsvVersion;
+		
+		parent::__construct($definitionsDir);
+	}
+	
+	public function getApsvVersion() {
+		return $this->apsvVersion;
 	}
 	
 	protected function buildParsers() {
