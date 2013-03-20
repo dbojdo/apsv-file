@@ -13,7 +13,8 @@ Webit\Parser\Apsv\Row\RowA:
       type: int
       start: 26
       end: 26
-    fleetNumber:
+    vibratorGroup:
+      type: int
       start: 27
       end: 27
     vibratorNumber:
@@ -48,11 +49,11 @@ Webit\Parser\Apsv\Row\RowA:
       type: int
       start: 47
       end: 49
-    averageGroundStiffness:
+    averageGroundViscosity:
       type: int
       start: 50
       end: 52
-    averageGroundViscosity:
+    averageGroundStiffness:
       type: int
       start: 53
       end: 55
@@ -72,21 +73,17 @@ Webit\Parser\Apsv\Row\RowA:
       type: int
       start: 82
       end: 86
-    shotNb:
+    acquisitionNb:
       type: int
       start: 87
       end: 88
-    acquisitionNb:
-      type: int
+    fleetNumber:
       start: 89
-      end: 90
-    twoDigitsFleetNumber:
+      end: 89
+    vibStatusCode:
       type: int
       start: 91
       end: 92
-    vibStatusCode:
-      start: 94
-      end: 94
     mass1Warning:
       start: 94
       end: 94
@@ -151,10 +148,6 @@ Webit\Parser\Apsv\Row\RowA:
       type: float
       start: 127
       end: 130
-    tbDate:
-      type: int
-      start: 131
-      end: 150
     sourceString:
       start: 1
-      end: 150
+      end: 130

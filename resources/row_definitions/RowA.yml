@@ -72,21 +72,18 @@ Webit\Parser\Apsv\Row\RowA:
       type: int
       start: 82
       end: 86
-    shotNb:
+    acquisitionNb:
       type: int
       start: 87
       end: 88
-    acquisitionNb:
+    twoDigitsFleetNumber:
       type: int
       start: 89
       end: 90
-    twoDigitsFleetNumber:
+    vibStatusCode:
       type: int
       start: 91
       end: 92
-    vibStatusCode:
-      start: 94
-      end: 94
     mass1Warning:
       start: 94
       end: 94
